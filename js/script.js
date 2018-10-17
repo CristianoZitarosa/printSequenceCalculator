@@ -72,8 +72,8 @@ form.onsubmit = function(e) {
   if ( (maxNumber<=totalpages) && (minNumber<maxNumber || minNumber===maxNumber) ) {
     if (pagesNumber > 2) {
       result.innerHTML = `<p>Da stampare: ${dispari.length} dispari, ${pari.length} pari. Prepara ${papers} fogli.</p>
-                          <p>Dispari: ${dispari.toString()}</p>
-                          <p>Pari: ${pari.toString()}</p>`;
+                          <p>Dispari: ${dispari.join(', ')}</p>
+                          <p>Pari: ${pari.join(', ')}</p>`;
     } else {
     	result.innerHTML = `<p>Occorre 1 solo foglio.</p>`;
     }
