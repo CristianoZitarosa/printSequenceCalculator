@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento|Nunito');
+
+* {
+  font-family: 'Nunito', serif;
+}
+
+h1 {
+  font-family: 'Sacramento', sans-serif;
+}
