@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Print Sequence Calculator"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Print Sequence Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+<body>
+  <form id="form">
+    <input type="number" id="page" min="1" step="1">
+    <input type="submit" id="submit" value="Submit" disabled="disabled">
+    <input type="button" id="reset" value="Reset" disabled>
+    <div>
+        <input type="checkbox" id="select" value="select" disabled>
+        <label for="select">Select an interval</label>
+    </div>
+    <div id="parameters">
+      <input type="number" id="minPage" min="1" step="1" disabled>
+      <input type="number" id="maxPage" min="1" step="1" disabled>
+    </div>
+  </form>
+  <div id="result"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
