@@ -4,6 +4,52 @@
   font-family: 'Nunito', serif;
 }
 
+body {
+  background: #969696;
+  margin: 0;
+}
+
+header {
+  background: #f2f2f2;
+  text-align: right;
+}
+
 h1 {
   font-family: 'Sacramento', sans-serif;
+  padding: 25px;
+  margin-top: 0;
+  box-shadow: 0px 2px 9px 2px #797979;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#help {
+  margin-left: 150px;
+}
+
+.message, form {
+  border-radius: 8px;
+  background: #f2f2f2;
+  padding: 15px;
+  box-shadow: 0 3px 5px 0px #797979;
+}
+
+.message {
+  margin: 5px 0;
+}
+
+.sequence {
+  text-align: justify;
+}
+
+.spacer {
+  width: 550px;
+  margin: 0 auto;
+}
+
+input {
+  cursor: pointer;
 }

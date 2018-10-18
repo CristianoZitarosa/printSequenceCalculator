@@ -3,7 +3,7 @@
 NOT yet complete and documented!
 
 This app is designed to help the user before the printing process of a document.
-The target user needs to print a document on both sides of a paper but does not
+The target user needs to print a document on both sides of a sheet but does not
 own an automatic duplex printer and or the software managing the document
 is not capable to separately print even/odd pages.
 
@@ -14,7 +14,7 @@ the sequence is broken.
 With this app the user just provides the document's number of pages, or an
 interval of pages.
 The app automatically provides both the even and odd sequences ready for a copy
-and paste, the number of papers needed for the operation.
+and paste, the number of sheets needed for the operation.
 
 This is it, just a simple tool to save time.
 
