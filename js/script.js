@@ -67,6 +67,7 @@ help.onclick = function() {
                               <p><strong>Note:</strong></p>
                               <p>1) As soon the app is loaded, only the box to insert the number of pages and the help button are available. Other elements are disabled.</p>
                               <p>2) After a first positive number is provided in the box, other elements will be available. The user will be able to submit the number, to select the checkbox to provide an interval or just reset the app.</p>
+                              <p>3) Once the result is shown, the user can only reset the App for a new sequence.
                             <div>`;
   } else {
     help.value = '>> Help <<';
@@ -108,7 +109,7 @@ form.onsubmit = function(e) {
                             <p><strong>To print:</strong></p>
                             <p class="spacer"><strong>${odd.length}</strong> odd, <strong>${even.length}</strong> even. Needed <strong>${papers}</strong> sheets.</p>
                             <p><strong>Odd</strong>:</p>
-                            <p class="sequence spacer">${odd.join(', ')}</p>
+                            <p id ="test" class="sequence spacer">${odd.join(', ')}</p>
                             <p><strong>Even</strong>:</p>
                             <p class="sequence spacer">${even.join(', ')}</p>
                           </div>`;
@@ -119,13 +120,37 @@ form.onsubmit = function(e) {
                           </div>`;
     }
   } else {
-    result.innerHTML = `<div class="message">
-                          <p><strong>Error :</strong></p>
-                          <p class="spacer">Wrong data insertion. Press <strong>Reset</strong> to repeat the operation.</p>
-                        </div>`;
-    // maxPage.style.color = 'red';
-    maxPage.style.boxShadow = '0 0 2px 1px #f00';
-    // minPage.style.color = 'red';
-    minPage.style.boxShadow = '0 0 2px 1px #f00';
+    errorCheck();
+    // result.innerHTML = `<div class="message">
+    //                       <p><strong>Error :</strong></p>
+    //                       <p class="spacer">Wrong data insertion. Press <strong>Reset</strong> to repeat the operation.</p>
+    //                     </div>`;
+    // // maxPage.style.color = 'red';
+    // maxPage.style.boxShadow = '0 0 2px 1px #f00';
+    // // minPage.style.color = 'red';
+    // minPage.style.boxShadow = '0 0 2px 1px #f00';
+  }
+
+  function errorCheck() {
+    if (maxNumber>totalpages) {
+      result.innerHTML = `<div class="message">
+                            <p><strong>Error :</strong></p>
+                            <p class="spacer">Interval's last page can't be bigger than document's last page.</p>
+                            <p class="spacer">Press <strong>Reset</strong> to repeat the operation.</p>
+                          </div>`;
+      //maxPage.style.boxShadow = '0 0 2px 1px #f00';
+      maxPage.style.background = '#e48f8f';
+
+    } else if (minNumber>maxNumber) {
+      result.innerHTML = `<div class="message">
+                            <p><strong>Error :</strong></p>
+                            <p class="spacer">Interval's first page can't be bigger than last page.</p>
+                            <p class="spacer">Press <strong>Reset</strong> to repeat the operation.</p>
+                          </div>`;
+      maxPage.style.background = '#e48f8f';
+      minPage.style.background = '#e48f8f';
+      // maxPage.style.boxShadow = '0 0 2px 1px #f00';
+      // minPage.style.boxShadow = '0 0 2px 1px #f00';
+    }
   }
 };
