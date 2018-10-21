@@ -53,16 +53,16 @@ let controller = {
 
   totalSheets : function(pagesNumber) {
     if (pagesNumber%2 === 0) {
-      papers = pagesNumber/2;
+      sheets = pagesNumber/2;
     } else {
-      papers = (pagesNumber+1)/2;
+      sheets = (pagesNumber+1)/2;
     }
   },
 
   reset : function () {
     model.even = [];
     model.odd = [];
-    papers = 0;
+    sheets = 0;
     view.reset();
   },
 
@@ -125,7 +125,7 @@ let controller = {
       if (pagesNumber > 2) {
         result.innerHTML = `<div class="message">
                               <p><strong>To print:</strong></p>
-                              <p class="spacer"><strong>${model.odd.length}</strong> odd, <strong>${model.even.length}</strong> even. Needed <strong>${papers}</strong> sheets.</p>
+                              <p class="spacer"><strong>${model.odd.length}</strong> odd, <strong>${model.even.length}</strong> even. Needed <strong>${sheets}</strong> sheets.</p>
                               <p><strong>Odd</strong>:</p>
                               <p id ="test" class="sequence spacer">${model.odd.join(', ')}</p>
                               <p><strong>Even</strong>:</p>
