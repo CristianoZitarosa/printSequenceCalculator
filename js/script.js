@@ -147,9 +147,9 @@ let controller = {
                               <p class="spacer">Last page of interval can't be bigger than document's last page.</p>
                               <p class="spacer">Press <strong>Reset</strong> to repeat the operation.</p>
                             </div>`;
-        //maxPage.style.boxShadow = '0 0 2px 1px #f00';
-        maxPage.style.background = '#e48f8f';
-
+        maxPage.style.boxShadow = '0px 0px 0px 2px #f00';
+        // maxPage.style.background = '#e48f8f';
+        // maxPage.style.border = '1px solid #a6a6a6';
       } else if (minNumber>maxNumber) {
         model.error = true;
         result.innerHTML = `<div class="message">
@@ -157,10 +157,12 @@ let controller = {
                               <p class="spacer">First page can't be bigger than last page.</p>
                               <p class="spacer">Press <strong>Reset</strong> to repeat the operation.</p>
                             </div>`;
-        maxPage.style.background = '#e48f8f';
-        minPage.style.background = '#e48f8f';
-        // maxPage.style.boxShadow = '0 0 2px 1px #f00';
-        // minPage.style.boxShadow = '0 0 2px 1px #f00';
+        // maxPage.style.background = '#e48f8f';
+        // maxPage.style.border = '1px solid #a6a6a6';
+        // minPage.style.background = '#e48f8f';
+        // minPage.style.border = '1px solid #a6a6a6';
+        maxPage.style.boxShadow = '0px 0px 0px 2px #f00';
+        minPage.style.boxShadow = '0px 0px 0px 2px #f00';
       }
     },
 
@@ -170,8 +172,8 @@ let controller = {
       select.checked = false;
       if (model.error) {
         model.error = false;
-        minPage.style.background = '';
-        maxPage.style.background = '';
+        minPage.style = '';
+        maxPage.style = '';
       }
       controller.setValues();
     },
@@ -196,7 +198,7 @@ let controller = {
                                   <p><strong>Note:</strong></p>
                                   <p>1) As soon the app is loaded, only the box to insert the number of pages and the help button are available. Other elements are disabled.</p>
                                   <p>2) After a first positive number is provided in the box, other elements will be available. The user will be able to submit the number, to select the checkbox to provide an interval or just reset the app.</p>
-                                  <p>3) Once the result is shown, the user can only reset the App for a new sequence.
+                                  <p>3) Once the result is shown, the user can only reset the App for a new sequence.</p>
                                 <div>`;
       } else {
         help.value = '>> Help <<';

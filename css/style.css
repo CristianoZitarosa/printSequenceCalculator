@@ -9,6 +9,21 @@ body {
   margin: 0;
 }
 
+input[type=number] {
+  padding: 5px 0 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+input[type=submit],
+input[type=button] {
+  border-radius: 4px;
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  font-size: 0.8em;
+}
+
 header {
   background: #f2f2f2;
   text-align: right;
@@ -27,10 +42,23 @@ h1 {
 }
 
 #help {
-  margin-left: 170px;
+  margin-left: 109px;
 }
 
-.message, form {
+#submit {
+  margin-left: 9px;
+}
+
+#reset {
+  margin-left: 29px;
+}
+
+#maxPage {
+  margin-left: 9px;
+}
+
+.message,
+form {
   border-radius: 8px;
   background: #f2f2f2;
   padding: 15px;
